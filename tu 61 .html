@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class object in object oriented programing in javascript</title>
+    <style>
+        body {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        class railwayform {
+            submit() {
+                alert(this.name + " : form is submitted for train no : "+this.trainno)
+            }
+            cancel() {
+                alert(this.name + " : form is cancel for train no : "+this.trainno)
+            }
+            fill(givenname, trainno) {
+                this.name = givenname
+                this.trainno = trainno
+            }
+        }
+
+        let harryform = new railwayform()
+        harryform.fill("harry", 123456)
+        let arunform1 = new railwayform()
+        let arunform2 = new railwayform()
+        arunform1.fill("arun", 654321)
+        arunform2.fill("arun", 654300)
+
+        harryform.submit()
+        arunform1.submit()
+        arunform2.submit()
+        arunform1.cancel()
+    </script>
+</body>
+
+</html>
